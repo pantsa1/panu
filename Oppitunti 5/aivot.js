@@ -7,19 +7,38 @@ function laatikkoFunktio(boxNumber){
         document.getElementById("laatikko1").style.lineHeight = "50px";
     }
     else if (boxNumber == 2){
-        // toiminnallisuus puuttuu!
-    }
-    else{
-        //toiminnallisuus puuttuu!
-    }
+        document.getElementById("laatikko2").innerHTML = "<table style='width:100%'>"+
+    "<tr>" +
+    "<th>Firstname</th>"+
+    "<th>Lastname</th>"+
+    "<th>Age</th>"+
+  "</tr>"+
+  "<tr>"+
+    "<td>Jussi</td>"+
+    "<td>Nousiainen</td>"+
+    "2<td>17</td>"+
+  "</tr>"+
+  "<tr>"+
+    "<td>Nikki</td>"+
+    "<td>Lunden</td>"+
+    "<td>16</td>"+
+  "</tr>"+
+"</table>";
+}
+else if(boxNumber == 3){
+    document.getElementById("laatikko3").innerHTML ="<img src='smiley2.png' alt='koita uudestaa apina'>";
+}
+else if (boxNumber == 4){
+    document.location.reload();
+}
     
 }
 function yhteystietoFunktio() {
     var x = document.getElementById("yhteystietolomake");
     var text = "";
     var i;
-    for (i = 0; i < x.length; i++) {
-      text += x.elements[i].value + "<br>";
+    for (i = x.length-1; i >= 0; i--) {
+      text += x.elements[i].name + ": " + x.elements[i].value + "<br>";
     }
     document.getElementById("yhteystiedotTuloste").innerHTML = text;
   }
