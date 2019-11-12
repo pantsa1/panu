@@ -41,4 +41,74 @@ function yhteystietoFunktio() {
       text += x.elements[i].name + ": " + x.elements[i].value + "<br>";
     }
     document.getElementById("yhteystiedotTuloste").innerHTML = text;
-  }
+}
+
+function diagrammiFunktio(){
+    var c = document.getElementById ('myCanvas');
+    var ctx = c.getContext('2d');
+    ctx.fillText("0", 10, 260);
+    ctx.fillText("3", 40, 240);
+    ctx.fillText("4", 60, 232);
+    ctx.fillText("5", 80, 227);
+    ctx.fillText("5", 100, 225);
+    ctx.fillText("7", 120, 215);
+    ctx.fillText("10", 140, 190);
+    ctx.fillText("16", 160, 155);
+    ctx.fillText("20", 180, 125);
+    ctx.fillText("23", 200, 105);
+    ctx.fillText("25", 220, 90);
+    ctx.fillText("26", 240, 85);
+    ctx.fillText("27", 260, 80);
+    ctx.fillText("27", 280, 80);
+
+      //viiva
+      ctx.beginPath();
+      ctx.moveTo(10, 260);
+      ctx.lineTo(40, 240);
+      ctx.lineTo(60, 232);
+      ctx.lineTo(80, 227);
+      ctx.lineTo(100, 225);
+      ctx.lineTo(120, 215);
+      ctx.lineTo(140, 190);
+      ctx.lineTo(160, 155);
+      ctx.lineTo(180, 125);
+      ctx.lineTo(200, 105);
+      ctx.lineTo(220, 90);
+      ctx.lineTo(240, 85);
+      ctx.lineTo(260, 80);
+      ctx.lineTo(280, 80);
+      ctx.stroke();
+
+    //Vaaaka
+    ctx.fillText("1", 30, 260);
+    ctx.fillText("2", 50, 260);
+    ctx.fillText("3", 70, 260);
+    ctx.fillText("4", 90, 260);
+    ctx.fillText("5", 110, 260);
+    ctx.fillText("6", 130, 260);
+    ctx.fillText("7", 150, 260);
+    ctx.fillText("8", 170, 260);
+    ctx.fillText("9", 190, 260);
+    ctx.fillText("10", 210, 260);
+    ctx.fillText("11", 230, 260);
+    ctx.fillText("12", 250, 260);
+    ctx.fillText("13", 270, 260);
+    ctx.fillText("14", 290, 260);
+    ctx.fillText("x1000 rpm", 340, 260);
+
+    //Pysty
+    ctx.fillText("0", 10, 260);
+    ctx.fillText("3", 10, 240);
+    ctx.fillText("6", 10, 220);
+    ctx.fillText("9", 10, 200);
+    ctx.fillText("12", 10, 180);
+    ctx.fillText("15", 10, 160);
+    ctx.fillText("18", 10, 140);
+    ctx.fillText("21", 10, 120);
+    ctx.fillText("24", 10, 100);
+    ctx.fillText("27", 10, 80);
+    ctx.fillText("30", 10, 60);
+    ctx.fillText("Hevosvoima", 10, 40);
+
+  
+}
