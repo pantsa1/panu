@@ -46,7 +46,22 @@ function yhteystietoFunktio() {
 function diagrammiFunktio(){
     var c = document.getElementById ('myCanvas');
     var ctx = c.getContext('2d');
-    ctx.fillText("0", 10, 260);
+    var arvoarray;
+    var mittariarray;
+    var mittaripituus;
+    var arvopituus;
+    var piste=20;
+    //var diagrammi = c.getContext("2d");
+    arvoarray = [260, 240, 232, 227, 225, 225, 215, 190, 155, 125, 105, 90, 85, 80, 80];
+    mittariarray = [0, 3, 4, 5, 5, 7, 10, 16, 20, 23, 25, 26, 27, 27];
+    
+    mittaripituus= mittariarray.length;
+    for (i = 1; i < mittaripituus; i++) {
+      piste=piste+20;
+     ctx.fillText(mittariarray[i], piste, arvoarray[i]);    
+     }
+/*
+    ctx.fillText("0", 20, 260);
     ctx.fillText("3", 40, 240);
     ctx.fillText("4", 60, 232);
     ctx.fillText("5", 80, 227);
@@ -60,10 +75,18 @@ function diagrammiFunktio(){
     ctx.fillText("26", 240, 85);
     ctx.fillText("27", 260, 80);
     ctx.fillText("27", 280, 80);
-
+*/
       //viiva
+     piste=20;
       ctx.beginPath();
-      ctx.moveTo(10, 260);
+      ctx.moveTo(20, 260);
+      for (i = 1; i < arvopituus; i++) {
+       piste=piste+20;
+       ctx.lineTo(piste, arvoarray[i]);
+       ctx.fillText(arvoarray[i], piste, arvoarray[i]);    
+      }
+      ctx.stroke();
+      /*
       ctx.lineTo(40, 240);
       ctx.lineTo(60, 232);
       ctx.lineTo(80, 227);
@@ -78,7 +101,7 @@ function diagrammiFunktio(){
       ctx.lineTo(260, 80);
       ctx.lineTo(280, 80);
       ctx.stroke();
-
+*/
     //Vaaaka
     ctx.fillText("1", 30, 260);
     ctx.fillText("2", 50, 260);
@@ -109,6 +132,5 @@ function diagrammiFunktio(){
     ctx.fillText("27", 10, 80);
     ctx.fillText("30", 10, 60);
     ctx.fillText("Hevosvoima", 10, 40);
-
   
-}
+  }
