@@ -1,3 +1,13 @@
+
+function testiF(){
+  alert("?");
+//$(document).ready(function(){
+  $("button").click(function(){
+    $("p").toggle();
+  });
+//});
+}
+
 function laatikkoFunktio(boxNumber){
     alert("Nyt vaihdetaan laatikko"+ boxNumber + ":n sisältöä!");
 
